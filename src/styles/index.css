@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Doran;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url("/fonts/woff/Doran-Regular.woff") format("woff"),
+    url("/fonts/woff2/Doran-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Doran;
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url("/fonts/woff/Doran-ExtraBold.woff") format("woff"),
+    url("/fonts/woff2/Doran-ExtraBold.woff2") format("woff2");
+}
+body {
+  font-family: Doran;
+}
+li {
+  @apply flex gap-3;
+}
+main {
+  @apply w-[90%] m-auto pt-24;
+}
+footer {
+  @apply w-[90%] m-auto pt-24 pb-5;
+}
