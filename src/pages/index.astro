@@ -2,13 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
 import takidImg from "../assets/takid.png";
-import eitaUrl from "../assets/eitaa.png";
-import telUrl from "../assets/telegram.png";
-import gitUrl from "../assets/github.png";
+import takidImgWh from "../assets/takid-wh.png";
+import eitaaIcon from "../assets/icons/eitaa.svg";
+import telegramIcon from "../assets/icons/telegram.svg";
+import githubIcon from "../assets/icons/github.svg";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
-  <main>
+  <main class="sm:hidden dark:text-white">
     <section class="big-typography">
       <div class="type flex flex-col items-end">
         <div class="">
@@ -29,7 +31,7 @@ import gitUrl from "../assets/github.png";
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-6 text-mOrange"
+          class="size-6 text-mOrange dark:text-mGreen dark:text-mGreen"
         >
           <path
             stroke-linecap="round"
@@ -40,7 +42,9 @@ import gitUrl from "../assets/github.png";
     </div>
     <section class="services">
       <div class="services-title pb-10">
-        <h2 class="font-extrabold text-mOrange text-[120px] flex justify-start">
+        <h2
+          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] flex justify-start"
+        >
           چه خدماتی ؟
         </h2>
         <hr
@@ -57,7 +61,7 @@ import gitUrl from "../assets/github.png";
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-36 text-mOrange"
+                class="size-36 text-mOrange dark:text-mGreen dark:text-mGreen"
               >
                 <path
                   stroke-linecap="round"
@@ -75,7 +79,7 @@ import gitUrl from "../assets/github.png";
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="size-6 text-mOrange"
+                  class="size-6 text-mOrange dark:text-mGreen dark:text-mGreen"
                 >
                   <path
                     fill-rule="evenodd"
@@ -89,7 +93,7 @@ import gitUrl from "../assets/github.png";
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="size-6 text-mOrange"
+                  class="size-6 text-mOrange dark:text-mGreen dark:text-mGreen"
                 >
                   <path
                     fill-rule="evenodd"
@@ -102,7 +106,7 @@ import gitUrl from "../assets/github.png";
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="size-6 text-mOrange"
+                  class="size-6 text-mOrange dark:text-mGreen dark:text-mGreen"
                 >
                   <path
                     fill-rule="evenodd"
@@ -123,7 +127,7 @@ import gitUrl from "../assets/github.png";
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-36 text-mOrange"
+                class="size-36 text-mOrange dark:text-mGreen"
               >
                 <path
                   stroke-linecap="round"
@@ -140,7 +144,7 @@ import gitUrl from "../assets/github.png";
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="size-6 text-mOrange"
+                  class="size-6 text-mOrange dark:text-mGreen"
                 >
                   <path
                     fill-rule="evenodd"
@@ -153,7 +157,7 @@ import gitUrl from "../assets/github.png";
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="size-6 text-mOrange"
+                  class="size-6 text-mOrange dark:text-mGreen"
                 >
                   <path
                     fill-rule="evenodd"
@@ -166,7 +170,7 @@ import gitUrl from "../assets/github.png";
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="size-6 text-mOrange"
+                  class="size-6 text-mOrange dark:text-mGreen"
                 >
                   <path
                     fill-rule="evenodd"
@@ -187,7 +191,7 @@ import gitUrl from "../assets/github.png";
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-6 text-mOrange"
+          class="size-6 text-mOrange dark:text-mGreen"
         >
           <path
             stroke-linecap="round"
@@ -198,7 +202,9 @@ import gitUrl from "../assets/github.png";
     </div>
     <section class="why-me grid grid-cols-3">
       <div class="services-title col-span-2">
-        <h2 class="font-extrabold text-mOrange text-[120px] flex justify-start">
+        <h2
+          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] flex justify-start"
+        >
           چرا من ؟
         </h2>
         <hr
@@ -212,7 +218,7 @@ import gitUrl from "../assets/github.png";
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="size-6 text-mOrange"
+              class="size-6 text-mOrange dark:text-mGreen"
             >
               <path
                 fill-rule="evenodd"
@@ -225,7 +231,7 @@ import gitUrl from "../assets/github.png";
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="size-6 text-mOrange"
+              class="size-6 text-mOrange dark:text-mGreen"
             >
               <path
                 fill-rule="evenodd"
@@ -238,7 +244,7 @@ import gitUrl from "../assets/github.png";
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="size-6 text-mOrange"
+              class="size-6 text-mOrange dark:text-mGreen"
             >
               <path
                 fill-rule="evenodd"
@@ -251,7 +257,7 @@ import gitUrl from "../assets/github.png";
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="size-6 text-mOrange"
+              class="size-6 text-mOrange dark:text-mGreen"
             >
               <path
                 fill-rule="evenodd"
@@ -262,14 +268,22 @@ import gitUrl from "../assets/github.png";
         </ul>
       </div>
       <div class="img col-span-3 flex justify-center pt-20">
-        <img src={takidImg.src} alt="takid" class="w-2/4" />
+        <Image src={takidImg} alt="takid" width={700} class="dark:hidden" />
+        <Image
+          src={takidImgWh}
+          alt="takid"
+          width={700}
+          class="hidden dark:block"
+        />
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="dark:text-white">
     <div class="footer flex gap-20">
       <div class="flex flex-col gap-5">
-        <h3 class="font-extrabold text-[28px] text-mOrange">خدمات</h3>
+        <h3 class="font-extrabold text-[28px] text-mOrange dark:text-mGreen">
+          خدمات
+        </h3>
         <ul class="col1-list flex flex-col gap-3">
           <li>طراحی سایت</li>
           <li>طراحی سایت خدماتی</li>
@@ -277,19 +291,21 @@ import gitUrl from "../assets/github.png";
         </ul>
       </div>
       <div class="flex flex-col gap-5">
-        <h3 class="font-extrabold text-[28px] text-mOrange">راه های ارتباطی</h3>
+        <h3 class="font-extrabold text-[28px] text-mOrange dark:text-mGreen">
+          راه های ارتباطی
+        </h3>
         <ul class="col2-list flex flex-col gap-3">
           <li>ایمیل : m.yousefi.isf@gmail.com</li>
           <li>شماره همراه : 09130199470</li>
           <li>
             <a href="#">
-              <img src={telUrl.src} alt="telegram" class="size-8" />
+              <Image src={telegramIcon} alt="telegram icon" width={30} />
             </a>
             <a href="#">
-              <img src={eitaUrl.src} alt="eitaa" class="size-8" />
+              <Image src={githubIcon} alt="github icon" width={30} />
             </a>
             <a href="#">
-              <img src={gitUrl.src} alt="github" class="size-8" />
+              <Image src={eitaaIcon} alt="eitaa icon" width={30} />
             </a>
           </li>
         </ul>
