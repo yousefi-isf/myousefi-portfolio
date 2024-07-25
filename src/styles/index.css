@@ -22,8 +22,14 @@ li {
   @apply flex gap-3;
 }
 main {
-  @apply w-[90%] m-auto pt-24;
+  @apply w-[90%] m-auto pt-24 sm:w-full sm:pt-0;
 }
 footer {
   @apply w-[90%] m-auto pt-24 pb-5;
 }
+section:not(.big-typography-sm) {
+  @apply w-[90%] m-auto;
+}
+/* * {
+  @apply sm:text-inherit;
+} */
