@@ -9,7 +9,7 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), icon(), react()],
-  output: "hybrid",
+  output: "static",
   adapter: node({
     mode: "standalone",
   }),
