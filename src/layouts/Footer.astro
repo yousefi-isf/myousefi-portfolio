@@ -1,0 +1,70 @@
+---
+import eitaaIcon from "../assets/icons/eitaa.svg";
+import telegramIcon from "../assets/icons/telegram.svg";
+import githubIcon from "../assets/icons/github.svg";
+import githubIconWh from "../assets/icons/github-wh.svg";
+import { Image } from "astro:assets";
+---
+
+<footer class="dark:text-white">
+  <div class="footer flex gap-20 sm:gap-10 sm:justify-center">
+    <div class="flex flex-col gap-5 sm:text-[12px]">
+      <h3 class="font-extrabold text-[28px] text-mOrange dark:text-mGreen">
+        خدمات
+      </h3>
+      <ul class="col1-list flex flex-col gap-3">
+        <li>طراحی سایت</li>
+        <li>طراحی سایت خدماتی</li>
+        <li>طراحی سایت آموزشی</li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-5 sm:text-[12px]">
+      <h3 class="font-extrabold text-[28px] text-mOrange dark:text-mGreen">
+        راه های ارتباطی
+      </h3>
+      <ul class="col2-list flex flex-col gap-3">
+        <li>ایمیل : m.yousefi.isf@gmail.com</li>
+        <li>شماره همراه : 09130199470</li>
+        <li>
+          <a href="#">
+            <Image
+              src={telegramIcon}
+              alt="telegram icon"
+              width={30}
+              class="sm:size-6"
+            />
+          </a>
+          <a href="#">
+            <Image
+              src={githubIcon}
+              alt="github icon"
+              width={30}
+              class="fill-white dark:hidden sm:size-6"
+            />
+            <Image
+              src={githubIconWh}
+              alt="github icon"
+              width={30}
+              class="hidden dark:block fill-white sm:size-6"
+            />
+          </a>
+          <a href="#">
+            <Image
+              src={eitaaIcon}
+              alt="eitaa icon"
+              width={30}
+              class="sm:size-6"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy-right text-center pt-5 sm:text-[12px]">
+    <h6>
+      تمام حقوق مادی و معنوی سایت برای <span class="font-extrabold"
+        >محمد یوسفی</span
+      > محفوظ است
+    </h6>
+  </div>
+</footer>

@@ -1,8 +1,7 @@
 ---
-// import Header from "../components/Header";
-// import Header from "./Header.astro";
-// import Header from "../components/Header";
+import "./layout.css";
 import Header from "./Header.astro";
+import Footer from "./Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 ---
 
@@ -11,10 +10,30 @@ import { ViewTransitions } from "astro:transitions";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M.Yousefi</title>
+    <link
+      rel="/apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
     <ViewTransitions />
   </head>
-  <body class="dark:bg-black transition-colors duration-500 hidden">
+  <body class="dark:bg-black transition-colors duration-500">
     <Header />
-    <slot />
+    <div class="dark:text-white">
+      <slot />
+    </div>
+    <Footer />
   </body>
 </html>
