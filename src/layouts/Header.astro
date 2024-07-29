@@ -5,34 +5,14 @@ import ThemeToggle from "../components/ThemeToggle";
 <header class="dark:text-white">
   <nav class="header p-12 flex justify-between sm:p-5">
     <ul class="right flex gap-32 text-[20px] sm:gap-3 sm:text-[16px]">
-      <li>نمونه کارها</li>
+      <a href="/"><li class="sm:hidden">صفحه اصلی</li></a>
+      <a href="/about-me"><li>نمونه کارها</li></a>
       <li>درباره من</li>
       <li>پست های مفید</li>
       <li class="sm:hidden">راه های ارتباطی</li>
     </ul>
     <ul class="left">
       <ThemeToggle client:only="react" />
-      <script is:inline>
-        const theme = (() => {
-          if (
-            typeof localStorage !== "undefined" &&
-            localStorage.getItem("theme")
-          ) {
-            return localStorage.getItem("theme");
-          }
-          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            return "dark";
-          }
-          return "light";
-        })();
-        localStorage.setItem("theme", theme);
-
-        if (theme === "light") {
-          document.documentElement.classList.remove("dark");
-        } else {
-          document.documentElement.classList.add("dark");
-        }
-      </script>
     </ul>
   </nav>
 </header>
