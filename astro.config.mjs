@@ -4,7 +4,7 @@ import node from "@astrojs/node";
 import icon from "astro-icon";
 import react from "@astrojs/react";
 
-import partytown from "@astrojs/partytown";
+// import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
