@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import node from "@astrojs/node";
+// import node from "@astrojs/node";
 import icon from "astro-icon";
 import react from "@astrojs/react";
 
@@ -10,9 +10,9 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [tailwind(), icon(), react()],
   output: "static",
-  adapter: node({
-    mode: "standalone",
-  }),
+  // adapter: node({
+  //   mode: "standalone",
+  // }),
   vite: {
     ssr: {
       noExternal: ["react-icons"],

@@ -4,6 +4,8 @@ import telegramIcon from "../assets/icons/telegram.svg";
 import githubIcon from "../assets/icons/github.svg";
 import githubIconWh from "../assets/icons/github-wh.svg";
 import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components'
+import PN from "persian-number";
 ---
 
 <footer class="dark:text-white">
@@ -23,38 +25,22 @@ import { Image } from "astro:assets";
         راه های ارتباطی
       </h3>
       <ul class="col2-list flex flex-col gap-3">
-        <li>ایمیل : m.yousefi.isf@gmail.com</li>
-        <li>شماره همراه : 09130199470</li>
         <li>
-          <a href="#">
-            <Image
-              src={telegramIcon}
-              alt="telegram icon"
-              width={30}
-              class="sm:size-6"
-            />
+          ایمیل :
+          <a href="">
+            m.yousefi.isf@gmail.com
           </a>
-          <a href="#">
-            <Image
-              src={githubIcon}
-              alt="github icon"
-              width={30}
-              class="fill-white dark:hidden sm:size-6"
-            />
-            <Image
-              src={githubIconWh}
-              alt="github icon"
-              width={30}
-              class="hidden dark:block fill-white sm:size-6"
-            />
+        </li>
+        <li>شماره همراه : {PN.convertEnToPe("09130199470")}</li>
+        <li>
+          <a href="https://t.me/yousefi_isf" target="_blank">
+            <Icon name="logos:telegram" class="size-8"/>
           </a>
-          <a href="#">
-            <Image
-              src={eitaaIcon}
-              alt="eitaa icon"
-              width={30}
-              class="sm:size-6"
-            />
+          <a href="https://github.com/yousefi-isf" target="_blank">
+            <Icon name="github-white" class="size-8"/>
+          </a>
+          <a href="https://eitaa.com/yousefi_isf" target="_blank">
+            <Icon name="eitaa" class="size-8"/>
           </a>
         </li>
       </ul>

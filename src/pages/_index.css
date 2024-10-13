@@ -1,0 +1,3 @@
+.down{
+    @apply flex justify-center sm:pt-12 sm:pb-12
+}

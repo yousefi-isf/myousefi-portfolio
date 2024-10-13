@@ -1,14 +1,17 @@
 ---
+import Bullet from "../components/bullet.astro";
+import "./_index.css";
 import Layout from "../layouts/Layout.astro";
 import takidImg from "../assets/takid.png";
 import takidImgWh from "../assets/takid-wh.png";
 import jostanImg from "../assets/jostan.png";
 import jostanImagDark from "../assets/jostan-dar.png";
 import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components'
 ---
 
 <Layout>
-  <main class="dark:text-white sm:pt-10">
+  <main class="dark:text-white sm:pt-10 flex flex-col gap-36">
     <section class="big-typography sm:hidden">
       <div class="type flex flex-col items-end">
         <div class="">
@@ -30,7 +33,7 @@ import { Image } from "astro:assets";
         class="hidden dark:block"
       />
     </section>
-    <div class="down flex justify-center pt-24 pb-24 sm:pt-12 sm:pb-12">
+    <div class="down">
       <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,19 +50,19 @@ import { Image } from "astro:assets";
         </svg>
       </button>
     </div>
-    <section class="services">
+    <section class="services flex flex-col gap-5">
       <div class="services-title pb-10">
         <h2
           class="font-extrabold text-mOrange dark:text-mGreen text-[120px] flex justify-start sm:text-[35px]"
         >
-          چه خدماتی ؟
+          سایت ، برگه اطمینان مشتری 
         </h2>
         <hr
           class="line-wide absolute w-full right-0 bg-mOrange dark:bg-mGreen border-none h-[1px] bottom-auto mt-[-80px] sm:hidden"
         />
       </div>
       <div class="services-details flex m-auto justify-center gap-56 sm:gap-5">
-        <div class="graphics">
+        <!-- <div class="graphics">
           <div class="graphics-title flex pb-10 sm:pb-4">
             <div class="icon">
               <svg
@@ -123,10 +126,10 @@ import { Image } from "astro:assets";
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <div class="web">
-          <div class="web-title flex pb-10 sm:pb-4">
-            <h3 class="font-extrabold text-[80px] sm:text-[20px]">
+          <div class="web-title flex sm:pb-4">
+            <!-- <h3 class="font-extrabold text-[80px] sm:text-[20px]">
               طراحی سایت
             </h3>
             <div class="icon">
@@ -144,10 +147,10 @@ import { Image } from "astro:assets";
                   d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
                 ></path>
               </svg>
-            </div>
+            </div> -->
           </div>
           <div class="web-lists">
-            <ul class="flex flex-col gap-5 sm:gap-3 text-[20px] sm:text-[10px]">
+            <ul class="flex flex-col gap-8 sm:gap-3 text-[20px] sm:text-[10px]">
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +163,8 @@ import { Image } from "astro:assets";
                     d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
                     clip-rule="evenodd"></path>
                 </svg>
-                طراحی پوستر ، بنر و ...
+                <span class="font-black text-2xl">حضور آنلاین</span> به معنای بقا
+                و توسعه در بازار رقابتی
               </li>
               <li>
                 <svg
@@ -173,7 +177,8 @@ import { Image } from "astro:assets";
                     fill-rule="evenodd"
                     d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
                     clip-rule="evenodd"></path>
-                </svg>طراحی قالب اینستاگرام ، یوتیوب و ...
+                </svg><span class="font-black text-2xl">حضور آنلاین</span> پلی سریع تر برای
+                ارتباط مستقیم با مشتریان
               </li>
               <li>
                 <svg
@@ -186,14 +191,60 @@ import { Image } from "astro:assets";
                     fill-rule="evenodd"
                     d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
                     clip-rule="evenodd"></path>
-                </svg>طراحی المان های یک سایت
+                </svg><span class="font-black text-2xl">حضور آنلاین</span> ابزاری
+                استراتژیک برای موفقیت
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
+                    clip-rule="evenodd"></path>
+                </svg><span class="font-black text-2xl">حضور آنلاین</span> اطمینان
+                حضورِ پایدار در آینده ای دورتر
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
+                    clip-rule="evenodd"></path>
+                </svg><span class="font-black text-2xl">حضور آنلاین</span> افزایش
+                کارایی و فروش
+              </li>
+              <li class="justify-center">
+                <span class="font-black text-2xl">...</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <div
+        class="flex justify-between p-10 items-center border-2 border-mGreen border-opacity-50 rounded-lg"
+      >
+        <span class="text-2xl leading-loose italic opacity-60"
+          >در دنیای امروز، حضور آنلاین تنها یک گزینه نیست؛ بلکه ضرورتی است که
+          موفقیت کسب‌وکارها را تعیین می‌کند. با ترکیب خلاقیت و
+          دانش فنی، راه‌حل‌هایی نوآورانه برای طراحی وبسایت‌ که
+          نه تنها زیبا و کاربرپسند هستند، بلکه باعث بازدهی چندبرابری کسب‌وکار شما خواهد شد</span
+        >
+        <a
+          class="border-none focus:outline-none transition-all text-3xl bg-mGreen text-black py-4 px-8 rounded hover:bg-black hover:text-mGreen active:ring-2 active:ring-mGreen duration-100 min-w-max justify-self-center center"
+          href="#">مشاوره رایگان</a
+        >
+      </div>
     </section>
-    <div class="down flex justify-center pt-24 pb-24 sm:pt-12 sm:pb-12">
+    <div class="down ">
       <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -224,58 +275,22 @@ import { Image } from "astro:assets";
         />
       </div>
       <div class="why-me-list col-span-1 sm:col-span-2">
-        <ul class="flex flex-col gap-5 text-[20px] sm:text-[10px] sm:mr-[50px]">
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                clip-rule="evenodd"></path>
-            </svg>آشنا و متخصص برای هویت بصری سایت
+        <ul class="flex flex-col gap-5  text-[20px] sm:text-[10px] sm:mr-[50px]">
+          <li class="flex items-center">
+            <Bullet/>آشنا و متخصص برای هویت بصری سایت
+          </li >
+          <li class="flex items-center">
+            <Bullet/>طراحی واکنش گرا
           </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                clip-rule="evenodd"></path>
-            </svg>طراحی واکنش گرا
+          <li class="flex items-center">
+            <Bullet/>پشتیبانی روزانه و پیگیری مداوم
           </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                clip-rule="evenodd"></path>
-            </svg>پشتیبانی روزانه و پیگیری مداوم
+          <li class="flex items-center">
+            <Bullet/>استفاده از تکنولوژی های به روز
           </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                clip-rule="evenodd"></path>
-            </svg>استفاده از تکنولوژی های به روز
+          <li class="flex items-center">
+            <Bullet/>
+            متخصص در مبانی طراحی بصری و گرافیکی
           </li>
         </ul>
       </div>
@@ -288,6 +303,38 @@ import { Image } from "astro:assets";
           class="hidden dark:block"
         />
       </div>
+    </section>
+    <div class="down ">
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 sm:size-5 text-mOrange dark:text-mGreen"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
+        </svg>
+      </button>
+    </div>
+    <section>
+      <div
+        class="services-title col-span-2 sm:col-span-1 sm:flex sm:items-center"
+      >
+        <h2
+          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] sm:text-[35px] flex justify-start"
+        >
+          مسیر همکاری
+        </h2>
+        <hr
+          class="absolute w-full right-0 bg-mOrange border-none h-[1px] bottom-auto mt-[-80px] dark:bg-mGreen sm:hidden"
+        />
+      </div>
+
     </section>
   </main>
 </Layout>
