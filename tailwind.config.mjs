@@ -7,6 +7,11 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: "selector",
   theme: {
+    extend: {
+      lineHeight: {
+        "normal": "10",
+      },
+    },
     screens: {
       "2xl": { max: "1535px" },
       // => @media (max-width: 1535px) { ... }

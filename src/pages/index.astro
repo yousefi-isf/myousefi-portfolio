@@ -8,6 +8,7 @@ import jostanImg from "../assets/jostan.png";
 import jostanImagDark from "../assets/jostan-dar.png";
 import { Image } from "astro:assets";
 // import { Icon } from "astro-icon/components";
+import PN from "persian-number";
 import Down from "../components/Down.astro";
 ---
 
@@ -20,7 +21,7 @@ import Down from "../components/Down.astro";
             محمد یوسفی
           </h2>
           <h3 class="text-[45px] flex items-start">
-            طراح و متخصص وب ، گرافیست
+            طراح و متخصص وب ، گرافیست نا آشنا ⏳
           </h3>
         </div>
       </div>
@@ -274,9 +275,22 @@ import Down from "../components/Down.astro";
       </div>
     </section>
     <Down />
-    <section id="guidness">
+    <section id="guidness" class="flex flex-col gap-10">
+      <!-- <div class="w-full relative">
+        <span
+          class="circle w-40 h-40 rounded-full
+                bg-white absolute z-100"
+        >
+        </span>
+      </div> -->
+      <!-- <span
+        class="circle w-40 h-40 rounded-full
+            bg-white absolute mx-auto left-0 right-0 text-center z-100"
+      >
+      </span> -->
       <div
-        class="services-title col-span-2 sm:col-span-1 sm:flex sm:items-center"
+        id="guidness-title"
+        class="col-span-2 sm:col-span-1 sm:flex sm:items-center"
       >
         <h2
           class="font-extrabold text-mOrange dark:text-mGreen text-[120px] sm:text-[35px] flex justify-start"
@@ -286,13 +300,142 @@ import Down from "../components/Down.astro";
         <hr
           class="absolute w-full right-0 bg-mOrange border-none h-[1px] bottom-auto mt-[-80px] dark:bg-mGreen sm:hidden"
         />
-        <div id="guidness-content" class="grid col-span-2 gap-5">
-          <div id="guidness-box" class="bg-mGreen text-black p-5 rounded-2xl  ">
-            <p>
-              سلام
-            </p>
+      </div>
+
+      <div id="guidness-content" class="grid grid-cols-2 gap-10">
+        <div
+          id="guidness-box"
+          class="right-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5 opacity-0"
+        >
+          <h2 class="font-bold text-2xl z-10 relative">نیازسنجی و مشاوره</h2>
+          <h3 class="text-xl z-10 relative leading-9">
+            هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان
+            هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر
+            یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا
+            نیازهای شما را برآورده کنم ✨
+          </h3>
+          <div
+            id="guidness-count"
+            class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
+          >
+            ۱
           </div>
         </div>
+        <div
+          id="guidness-box"
+          class="left-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5 opacity-0"
+        >
+          <h2 class="font-bold text-2xl z-10 relative">نیازسنجی و مشاوره</h2>
+          <h3 class="text-xl z-10 relative leading-9">
+            هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان
+            هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر
+            یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا
+            نیازهای شما را برآورده کنم ✨
+          </h3>
+          <div
+            id="guidness-count"
+            class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
+          >
+            ۲
+          </div>
+        </div>
+        <div
+          id="guidness-box"
+          class="right-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5 opacity-0"
+        >
+          <h2 class="font-bold text-2xl z-10 relative">نیازسنجی و مشاوره</h2>
+          <h3 class="text-xl z-10 relative leading-9">
+            هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان
+            هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر
+            یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا
+            نیازهای شما را برآورده کنم ✨
+          </h3>
+          <div
+            id="guidness-count"
+            class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
+          >
+            ۱
+          </div>
+        </div>
+        <div
+        id="guidness-box"
+        class="left-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5 opacity-0"
+      >
+        <h2 class="font-bold text-2xl z-10 relative">نیازسنجی و مشاوره</h2>
+        <h3 class="text-xl z-10 relative leading-9">
+          هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان
+          هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر
+          یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا
+          نیازهای شما را برآورده کنم ✨
+        </h3>
+        <div
+          id="guidness-count"
+          class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
+        >
+          ۲
+        </div>
+      </div>
+        <script>
+          import anime from "animejs/lib/anime.es.js";
+          const start = document.querySelector("#guidness-content");
+          const rights = document.querySelectorAll(".right-comming");
+          const lefts = document.querySelectorAll(".left-comming");
+          // console.log(left)
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  let rc = 0;
+                  for (const r of rights) {
+                    anime({
+                    targets: r,
+                    translateX: [100, 0],
+                    opacity: [0, 1], 
+                    duration: 1600, 
+                    delay: rc,
+                    easing: "easeInOutQuint",
+                  });
+                  rc += 100;
+                  // observer.unobserve(r);
+                  }
+                  let lc = 0 + rc;
+                  for (const l of lefts) {
+                    anime({
+                    targets: l,
+                    translateX: [-100, 0],
+                    opacity: [0, 1], 
+                    duration: 1600, 
+                    delay: lc,
+                    easing: "easeInOutQuint",
+                  });
+                  lc += 600;
+                }
+                observer.unobserve(start);
+                }
+              });
+            },
+            { threshold: 0.5 }
+          ); 
+
+          
+          observer.observe(start);
+
+        </script>
+        <!-- <div
+          id="guidness-box"
+          class="bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5"
+        >
+          <h2 class="font-bold text-2xl z-10 relative">طراحی مفهومی و Wireframe</h2>
+          <h3 class="z-10 relative">
+            هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا نیازهای شما را برآورده کنم ✨
+          </h3>
+          <div
+            id="guidness-count"
+            class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
+          >
+            ۲
+          </div>
+        </div> -->
       </div>
     </section>
   </main>
