@@ -6,24 +6,28 @@ import takidImg from "../assets/takid.png";
 import takidImgWh from "../assets/takid-wh.png";
 import jostanImg from "../assets/jostan.png";
 import jostanImagDark from "../assets/jostan-dar.png";
+import myPic from "../assets/prof-opt.jpg";
 import { Image } from "astro:assets";
 // import { Icon } from "astro-icon/components";
 import PN from "persian-number";
 import Down from "../components/Down.astro";
+import ServiceItem from "../components/ServiceItem.astro";
+import GuideBox from "../components/GuideBox.astro";
 ---
 
 <Layout>
-  <main class="dark:text-white sm:pt-10 flex flex-col gap-36">
-    <section class="big-typography sm:hidden">
-      <div class="type flex flex-col items-end">
-        <div class="">
-          <h2 class="font-extrabold text-[150px] flex justify-start">
-            محمد یوسفی
-          </h2>
-          <h3 class="text-[45px] flex items-start">
-            طراح و متخصص وب ، گرافیست نا آشنا ⏳
-          </h3>
-        </div>
+  <main class="dark:text-white sm:pt-10 flex flex-col gap-36 sm:gap-10">
+    <section class="big-typography flex gap-5 items-center sm:hidden">
+      <div class="type flex flex-col w-full">
+        <h2 class="font-extrabold text-[150px] flex justify-start">
+          محمد یوسفی
+        </h2>
+        <h3 class="text-[45px] flex items-start">
+          طراح و متخصص وب ، گرافیست نا آشنا ⏳
+        </h3>
+      </div>
+      <div class="pic">
+        <Image src={myPic} alt="my-picture" class="rounded-2xl" />
       </div>
     </section>
     <section class="big-typography-sm hidden sm:block">
@@ -37,11 +41,11 @@ import Down from "../components/Down.astro";
     </section>
     <Down />
     <section class="services flex flex-col gap-5">
-      <div class="services-title pb-10">
+      <div class="services-title pb-10 sm:pb-0 sm:flex sm:justify-center">
         <h2
-          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] flex justify-start sm:text-[35px]"
+          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] flex justify-start sm:text-[40px] text-center"
         >
-          سایت ، برگه اطمینان مشتری
+          سایت برگه اطمینان مشتری
         </h2>
         <hr
           class="line-wide absolute w-full right-0 bg-mOrange dark:bg-mGreen border-none h-[1px] bottom-auto mt-[-80px] sm:hidden"
@@ -136,78 +140,26 @@ import Down from "../components/Down.astro";
             </div> -->
           </div>
           <div class="web-lists">
-            <ul class="flex flex-col gap-8 sm:gap-3 text-[20px] sm:text-[10px]">
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span class="font-black text-2xl">حضور آنلاین</span> به معنای بقا
-                و توسعه در بازار رقابتی
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                    clip-rule="evenodd"></path>
-                </svg><span class="font-black text-2xl">حضور آنلاین</span> پلی سریع
-                تر برای ارتباط مستقیم با مشتریان
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                    clip-rule="evenodd"></path>
-                </svg><span class="font-black text-2xl">حضور آنلاین</span> ابزاری
-                استراتژیک برای موفقیت
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                    clip-rule="evenodd"></path>
-                </svg><span class="font-black text-2xl">حضور آنلاین</span> اطمینان
-                حضورِ پایدار در آینده ای دورتر
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="size-6 sm:size-3 text-mOrange dark:text-mGreen"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.5 7.5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9Z"
-                    clip-rule="evenodd"></path>
-                </svg><span class="font-black text-2xl">حضور آنلاین</span> افزایش
-                کارایی و فروش
-              </li>
+            <ul
+              class="flex flex-col gap-8 sm:gap-4 text-[20px] sm:text-[16px] sm:justify-center"
+            >
+              <ServiceItem
+                content="به معنای بقا و توسعه در بازار رقابتی"
+                isTitle={true}
+              />
+              <ServiceItem
+                content="پلی سریع تر برای ارتباط مستقیم با مشتریان"
+                isTitle={false}
+              />
+              <ServiceItem
+                content="ابزاری استراتژیک برای موفقیت"
+                isTitle={false}
+              />
+              <ServiceItem
+                content="اطمینان حضور پایدار در آینده ای دورتر"
+                isTitle={false}
+              />
+              <ServiceItem content="افزایش کارایی و فروش" isTitle={false} />
               <li class="justify-center">
                 <span class="font-black text-2xl">...</span>
               </li>
@@ -216,27 +168,27 @@ import Down from "../components/Down.astro";
         </div>
       </div>
       <div
-        class="flex justify-between p-10 items-center border-2 border-mGreen border-opacity-50 rounded-lg"
+        class="flex justify-between p-10 items-center sm:flex-col sm:gap-5 border-2 dark:border-mGreen border-mOrange border-opacity-50 rounded-lg"
       >
-        <span class="text-2xl leading-loose italic opacity-60"
+        <span class="text-2xl leading-loose italic opacity-60 sm:text-justify"
           >در دنیای امروز، حضور آنلاین تنها یک گزینه نیست؛ بلکه ضرورتی است که
           موفقیت کسب‌وکارها را تعیین می‌کند. با ترکیب خلاقیت و دانش فنی،
           راه‌حل‌هایی نوآورانه برای طراحی وبسایت‌ که نه تنها زیبا و کاربرپسند
           هستند، بلکه باعث بازدهی چندبرابری کسب‌وکار شما خواهد شد</span
         >
         <a
-          class="border-none focus:outline-none transition-all text-3xl bg-mGreen text-black py-4 px-8 rounded hover:bg-black hover:text-mGreen active:ring-2 active:ring-mGreen duration-100 min-w-max justify-self-center center"
+          class="border-none focus:outline-none transition-all text-3xl dark:bg-mGreen dark:text-black py-4 px-8 rounded dark:hover:bg-black dark:hover:text-mGreen hover:text-black active:ring-2 dark:active:ring-mGreen active:ring-mOrange duration-100 min-w-max justify-self-center center underline underline-offset-4"
           href="#">مشاوره رایگان</a
         >
       </div>
     </section>
     <Down />
-    <section class="why-me grid grid-cols-3">
+    <section class="why-me grid grid-cols-3 sm:gap-4">
       <div
         class="services-title col-span-2 sm:col-span-1 sm:flex sm:items-center"
       >
         <h2
-          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] sm:text-[35px] flex justify-start"
+          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] sm:text-[40px] flex justify-start"
         >
           چرا من ؟
         </h2>
@@ -245,7 +197,7 @@ import Down from "../components/Down.astro";
         />
       </div>
       <div class="why-me-list col-span-1 sm:col-span-2">
-        <ul class="flex flex-col gap-5 text-[20px] sm:text-[10px] sm:mr-[50px]">
+        <ul class="flex flex-col gap-5 text-[20px] sm:text-xl sm:gap-8">
           <li class="flex items-center">
             <Bullet />آشنا و متخصص برای هویت بصری سایت
           </li>
@@ -264,7 +216,7 @@ import Down from "../components/Down.astro";
           </li>
         </ul>
       </div>
-      <div class="img col-span-3 flex justify-center pt-20">
+      <div class="img col-span-3 flex justify-center pt-20 sm:pt-10">
         <Image src={takidImg} alt="takid" width={700} class="dark:hidden" />
         <Image
           src={takidImgWh}
@@ -276,24 +228,12 @@ import Down from "../components/Down.astro";
     </section>
     <Down />
     <section id="guidness" class="flex flex-col gap-10">
-      <!-- <div class="w-full relative">
-        <span
-          class="circle w-40 h-40 rounded-full
-                bg-white absolute z-100"
-        >
-        </span>
-      </div> -->
-      <!-- <span
-        class="circle w-40 h-40 rounded-full
-            bg-white absolute mx-auto left-0 right-0 text-center z-100"
-      >
-      </span> -->
       <div
         id="guidness-title"
-        class="col-span-2 sm:col-span-1 sm:flex sm:items-center"
+        class="col-span-2 sm:col-span-1 sm:flex sm:items-center sm:justify-center"
       >
         <h2
-          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] sm:text-[35px] flex justify-start"
+          class="font-extrabold text-mOrange dark:text-mGreen text-[120px] sm:text-[40px]"
         >
           مسیر همکاری
         </h2>
@@ -302,10 +242,18 @@ import Down from "../components/Down.astro";
         />
       </div>
 
-      <div id="guidness-content" class="grid grid-cols-2 gap-10">
+      <div id="guidness-content" class="grid grid-cols-2 gap-10 sm:grid-cols-1">
+        <!-- <GuideBox
+          title="نیاز سنجی و مشاوره"
+          body="هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان هدف شما
+    چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر یک وب سایت را
+    دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا نیازهای شما را برآورده
+    کنم ✨"
+          order="۱"
+        /> -->
         <div
           id="guidness-box"
-          class="right-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5 opacity-0"
+          class="right-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5"
         >
           <h2 class="font-bold text-2xl z-10 relative">نیازسنجی و مشاوره</h2>
           <h3 class="text-xl z-10 relative leading-9">
@@ -323,14 +271,16 @@ import Down from "../components/Down.astro";
         </div>
         <div
           id="guidness-box"
-          class="left-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5 opacity-0"
+          class="left-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5"
         >
-          <h2 class="font-bold text-2xl z-10 relative">نیازسنجی و مشاوره</h2>
+          <h2 class="font-bold text-2xl z-10 relative">
+            طراحی مفهومی و Wireframes
+          </h2>
           <h3 class="text-xl z-10 relative leading-9">
-            هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان
-            هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر
-            یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا
-            نیازهای شما را برآورده کنم ✨
+            نسبت به شرایط و نیازهای مرحله قبلی طراحی مفهومی یا طراحی بصری با
+            توجه به هویت برند شما انجام میشه. طراحی کامپوننت های پایه ، طراحی
+            herosection ها ، طراحی صفحات پایه و اصلی و هر آنچه در نگاه کاربر
+            جلوه خواهد کرد.
           </h3>
           <div
             id="guidness-count"
@@ -341,41 +291,45 @@ import Down from "../components/Down.astro";
         </div>
         <div
           id="guidness-box"
-          class="right-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5 opacity-0"
+          class="right-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5"
         >
-          <h2 class="font-bold text-2xl z-10 relative">نیازسنجی و مشاوره</h2>
+          <h2 class="font-bold text-2xl z-10 relative">
+            توسعه ، پیاده سازی و تست
+          </h2>
           <h3 class="text-xl z-10 relative leading-9">
-            هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان
-            هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر
-            یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا
-            نیازهای شما را برآورده کنم ✨
+            در این مرحله با توجه به طراحی انجام شده و نیازهایی که قراره برای
+            کاربران endpoint شما برآورده بشه لیست شده و مرحله توسعه شروع میشه.
+            انتخاب ابزار و تکنولوژی مناسب از مهمترین فاکتورهای این مرحله به حساب
+            میاد که همیشه بیشترین دقت رو براش صرف میکنم تا به صرفه ترین و بهترین
+            نتیجه را داشته باشه
           </h3>
           <div
             id="guidness-count"
             class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
           >
-            ۱
+            ۳
           </div>
         </div>
         <div
-        id="guidness-box"
-        class="left-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5 opacity-0"
-      >
-        <h2 class="font-bold text-2xl z-10 relative">نیازسنجی و مشاوره</h2>
-        <h3 class="text-xl z-10 relative leading-9">
-          هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان
-          هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر
-          یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا
-          نیازهای شما را برآورده کنم ✨
-        </h3>
-        <div
-          id="guidness-count"
-          class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
+          id="guidness-box"
+          class="left-comming bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5"
         >
-          ۲
+          <h2 class="font-bold text-2xl z-10 relative">پشتیبانی و آموزش</h2>
+          <h3 class="text-xl z-10 relative leading-9">
+            اهمیت این قسمت در خیلی از مجموعه ها و موسسه های نرم افزاری مورد
+            اجهاف قرار گرفته که به نظر من جلوه اصلی هر محصولی در میزان زمان
+            ماندگاری آن در بازار خودشه ؛ که این ماندگاری وابسته به پشتیبانی فنی
+            و محتوایی محصول خواهد بود. بنده همانطور که همیشه سعی کردم دقت کافی
+            را در قسمت توسعه و تست داشته باشم ، در واحد نگهداری هم داشته باشم
+          </h3>
+          <div
+            id="guidness-count"
+            class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
+          >
+            ۴
+          </div>
         </div>
-      </div>
-        <script>
+        <!-- <script>
           import anime from "animejs/lib/anime.es.js";
           const start = document.querySelector("#guidness-content");
           const rights = document.querySelectorAll(".right-comming");
@@ -388,54 +342,37 @@ import Down from "../components/Down.astro";
                   let rc = 0;
                   for (const r of rights) {
                     anime({
-                    targets: r,
-                    translateX: [100, 0],
-                    opacity: [0, 1], 
-                    duration: 1600, 
-                    delay: rc,
-                    easing: "easeInOutQuint",
-                  });
-                  rc += 100;
-                  // observer.unobserve(r);
+                      targets: r,
+                      translateX: [100, 0],
+                      opacity: [0, 1],
+                      duration: 1600,
+                      delay: rc,
+                      easing: "easeInOutQuint",
+                    });
+                    rc += 100;
+                    // observer.unobserve(r);
                   }
                   let lc = 0 + rc;
                   for (const l of lefts) {
                     anime({
-                    targets: l,
-                    translateX: [-100, 0],
-                    opacity: [0, 1], 
-                    duration: 1600, 
-                    delay: lc,
-                    easing: "easeInOutQuint",
-                  });
-                  lc += 600;
-                }
-                observer.unobserve(start);
+                      targets: l,
+                      translateX: [-100, 0],
+                      opacity: [0, 1],
+                      duration: 1600,
+                      delay: lc,
+                      easing: "easeInOutQuint",
+                    });
+                    lc += 600;
+                  }
+                  observer.unobserve(start);
                 }
               });
             },
             { threshold: 0.5 }
-          ); 
+          );
 
-          
           observer.observe(start);
-
-        </script>
-        <!-- <div
-          id="guidness-box"
-          class="bg-mGreen text-black p-10 rounded-2xl relative overflow-hidden flex flex-col gap-5"
-        >
-          <h2 class="font-bold text-2xl z-10 relative">طراحی مفهومی و Wireframe</h2>
-          <h3 class="z-10 relative">
-            هدف اصلی شما از ساخت یک وب سایت و انتظاراتی شما از اون چیه ؟ مخاطبان هدف شما چه کسانی هستند ؟ هویت برند شما تا چه حد قابلیت سوار شدن بر یک وب سایت را دارد ؟ . مهمترین مرحله هر پروژه که سراپا گوش هستم تا نیازهای شما را برآورده کنم ✨
-          </h3>
-          <div
-            id="guidness-count"
-            class="font-black text-9xl absolute top-[5%] z-0 opacity-10"
-          >
-            ۲
-          </div>
-        </div> -->
+        </script> -->
       </div>
     </section>
   </main>
