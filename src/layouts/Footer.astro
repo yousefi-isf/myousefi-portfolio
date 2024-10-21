@@ -9,9 +9,9 @@ import PN from "persian-number";
 ---
 
 <footer class="dark:text-white border-t w-full dark:border-mGreen border-mOrange mt-32 pt-10 pb-0 flex flex-col gap-10">
-  <div class="footer-contents w-[80%] m-auto flex flex-col gap-5 items-center">
-    <div class="footer flex gap-20 sm:gap-10 sm:justify-center items-center">
-      <div class="flex flex-col gap-5 sm:text-[12px]">
+  <div class="footer-contents w-[80%] sm:w-[90%] m-auto flex flex-col gap-5 items-center">
+    <div class="footer flex gap-20 sm:gap-5 sm:justify-center items-center">
+      <div class="flex flex-col gap-5 sm:text-[12px] sm:hidden">
         <h3 class="font-extrabold text-[28px] text-mOrange dark:text-mGreen">
           خدمات
         </h3>
@@ -27,7 +27,7 @@ import PN from "persian-number";
         </h3>
         <ul class="col2-list flex flex-col gap-3 text-xl">
           <li>
-            ایمیل :
+            ایمیل:
             <a href=""> m.yousefi.isf@gmail.com </a>
           </li>
           <li>شماره همراه : {PN.convertEnToPe("09130199470")}</li>
@@ -36,7 +36,8 @@ import PN from "persian-number";
               <Icon name="logos:telegram" class="size-8" />
             </a>
             <a href="https://github.com/yousefi-isf" target="_blank">
-              <Icon name="github-white" class="size-8" />
+              <Icon name="github-white" class="size-8 hidden dark:block" />
+              <Icon name="skill-icons:github-dark" class="size-8 dark:hidden" />
             </a>
             <a href="https://eitaa.com/yousefi_isf" target="_blank">
               <Icon name="eitaa" class="size-8" />

@@ -10,9 +10,10 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [tailwind(), icon(), react()],
   output: "static",
-  // adapter: node({
-  //   mode: "standalone",
-  // }),
+  server: {
+    port: 8080,
+    host: true,
+  },
   vite: {
     ssr: {
       noExternal: ["react-icons"],
